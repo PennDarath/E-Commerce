@@ -9,7 +9,7 @@ export default function Card() {
             <img src="../images/phone1.webp" className="w-56" alt="" />
           </div>
           <div>
-            <a className='flex w-full  items-center justify-center' href="#">darath</a>
+            <a className='flex w-full  items-center justify-center' href="#"></a>
           </div>
         </div>
       </div>
