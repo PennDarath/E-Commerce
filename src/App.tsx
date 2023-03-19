@@ -19,7 +19,7 @@ function App() {
       <Slides images={fakeimages}/>
       <Card />
       <h1>
-        hello world
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta, ipsum.
       </h1>
     </div>
   );
