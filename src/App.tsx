@@ -17,10 +17,6 @@ function App() {
       <Login />
       <NavBar />
       <Slides images={fakeimages}/>
-      <Card />
-      <h1>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta, ipsum.
-      </h1>
     </div>
   );
 }
