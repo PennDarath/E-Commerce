@@ -18,6 +18,7 @@ function App() {
       <NavBar />
       <Slides images={fakeimages}/>
       <Card />
+      <Card />
 
     </div>
   );
