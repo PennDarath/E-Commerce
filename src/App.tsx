@@ -14,8 +14,11 @@ function App() {
 
   return (
     <div className="w-full h-screen bg-white">
-<h1>h1</h1>
-
+      <Login />
+      <NavBar />
+      <Slides images={fakeimages}/>
+      <Card />
+   
     </div>
   );
 }
