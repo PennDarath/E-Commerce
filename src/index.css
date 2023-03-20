@@ -16,7 +16,7 @@
     @apply w-full  md:w-[90vw] lg:w-[90vw] 2xl:w-[72vw] 1.5xl:w-[90vw] xl:w-[90vw] sm:w-[95vw] mx-auto px-5 !text-gray-600
   }
   .text-size {
-    @apply !text-sm !text-gray-600
+    @apply !text-base !text-gray-600
   }
   .text-color {
     @apply !text-indigo-700

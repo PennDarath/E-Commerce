@@ -2,6 +2,7 @@ import { useState } from 'react';
 import Card from './components/Card/Card';
 import Login from './components/HeaderSection/Login';
 import NavBar from './components/HeaderSection/NavBar';
+import Item from './components/Items/Item';
 import Slides from './components/SlideSection/Slides';
 
 const fakeimages = [
@@ -18,7 +19,7 @@ function App() {
       <NavBar />
       <Slides images={fakeimages}/>
       <Card />
-   
+
     </div>
   );
 }

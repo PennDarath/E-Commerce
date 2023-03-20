@@ -61,7 +61,10 @@ export default function NavBar() {
             <FiShuffle />
             <FiHeart className="mx-6" />
             <FiShoppingCart />
+            <a href="NavbarPhone">
+
             <FiMenu className="lg:hidden ml-6" />
+            </a>
           </div>
         </div>
       </div>
