@@ -7,7 +7,7 @@ export default function Slides({ images }: Props) {
 
   return (
     <>
-      <div className="width-padding h-fit flex max-md:flex-col max-md:py-10 items-center justify-between pt-24">
+      <div className="width-padding flex h-fit  max-md:flex-col max-lg:py-16 items-center justify-between pt-24">
         <div>
           <h1 className="text-title">Trade-in-offer</h1>
           <h1 className="font-bold text-[47px] text-black tracking-wide">
@@ -21,9 +21,13 @@ export default function Slides({ images }: Props) {
           </h1>
           <h1>Shop Now</h1>
         </div>
-        <div className="flex gap-8 ">
+        <div className="flex gap-8 max-md:pt-12 ">
           {images.map(image => (
-            <img className=" h-[400px] max-1 max-lg:h-[300px] max-sm:h-[250px] max-sm:-5" src={image} alt="" />
+            <img
+              className=" h-[400px] max-1 max-lg:h-[300px] max-sm:h-[250px] max-sm:-5"
+              src={image}
+              alt=""
+            />
           ))}
         </div>
       </div>
