@@ -9,29 +9,31 @@ import {
 } from 'react-icons/fi';
 import NavbarItems from './NavbarItems';
 
-const navItems = [ 'Shop', 'Mega menu', 'Blog', 'Pages'];
 
-export default function NavBar() {
-  const StickyNav = React.useRef<HTMLDivElement>(null);
+const navItems = ['Shop', 'Mega menu', 'Blog', 'Pages'];
 
-  React.useEffect(() => {
-    const stickyNav = StickyNav.current;
-    const stick = stickyNav!.offsetTop;
-    const scrollCallBack = () => {
-      console.log(stickyNav?.offsetTop);
-      if (window.scrollY > 130) {
-        stickyNav!.classList.add('border-b-indigo-700');
-      } else {
-        stickyNav!.classList.remove('border-b-indigo-700');
-      }
-    };
 
-    window.addEventListener('scroll', scrollCallBack);
+export default function NavBar({setShow}: any) {
+  // const StickyNav = React.useRef<HTMLDivElement>(null);
 
-    return () => {
-      window.removeEventListener('scroll', scrollCallBack);
-    };
-  }, []);
+  // React.useEffect(() => {
+  //   const stickyNav = StickyNav.current;
+  //   const stick = stickyNav!.offsetTop;
+  //   const scrollCallBack = () => {
+  //     console.log(stickyNav?.offsetTop);
+  //     if (window.scrollY > 130) {
+  //       stickyNav!.classList.add('border-b-indigo-700');
+  //     } else {
+  //       stickyNav!.classList.remove('border-b-indigo-700');
+  //     }
+  //   };
+
+    // window.addEventListener('scroll', scrollCallBack);
+
+  //   return () => {
+  //     window.removeEventListener('scroll', scrollCallBack);
+  //   };
+  // }, []);
 
   return (
     <>
@@ -45,9 +47,13 @@ export default function NavBar() {
               <p className="font-navbar">All Categories</p>
               <div className="relative text-gray-400 pl-6 py-2  ml-7 flex-1">
                 <span className="absolute left-0 top-1/2 -translate-y-1/2">
-                  <FiSearch className='text-xl' />
+                  <FiSearch className="text-xl" />
                 </span>
-                <input type="search" placeholder="Search" className="bg-white outline-none w-full" />
+                <input
+                  type="search"
+                  placeholder="Search"
+                  className="bg-white outline-none w-full"
+                />
               </div>
             </div>
           </div>
@@ -61,17 +67,14 @@ export default function NavBar() {
             <FiShuffle />
             <FiHeart className="mx-6" />
             <FiShoppingCart />
-            <a href="NavbarPhone">
-
-            <FiMenu className="lg:hidden ml-6" />
-            </a>
+              <FiMenu className="lg:hidden ml-6" onClick={()=>setShow(true)}/>
           </div>
         </div>
       </div>
       {/* navbar categories */}
       <div
-        className="bg-white sticky top-0 lg:border-b-2 lg:pb-3"
-        ref={StickyNav}
+        className="bg-white top-0 lg:border-b-2 lg:pb-3"
+        // ref={StickyNav}
       >
         <div className="width-padding max-lg:hidden flex items-center justify-between">
           <div className="flex items-center">

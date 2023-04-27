@@ -19,7 +19,7 @@ export default function Card() {
             <div className='w-full'>
               <img
                 src={image}
-                className="width-padding md:w-44 h-44 rounded-md border object-cover border-indigo-300 "
+                className="width-padding md:w-44 h-44 rounded-full border-2 object-cover border-indigo-700 "
                 alt=""
               />
             </div>
