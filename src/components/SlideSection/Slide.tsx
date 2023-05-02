@@ -57,30 +57,30 @@ export default function Slide() {
 //   </div> 
 //     ))}
 //   </div> 
-<div className=''>
+<div  className=''>
   <div className="carousel w-full">
-  <div id="slide1" className="carousel-item relative w-full">
-    <SlideItems src1={data[0].src1} src2={data[0].src2} title1={data[0].title1} title2={data[0].title2} title3={data[0].title3} title4={data[0].title4} title5={data[0].title5}/>
-    <div className="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
-      <a href="#slide3" className="btn btn-circle bg-slate-400">❮</a> 
-      <a href="#slide2" className="btn btn-circle bg-slate-400">❯</a>
+    <div id="slide1" className="carousel-item relative w-full">
+      <SlideItems src1={data[0].src1} src2={data[0].src2} title1={data[0].title1} title2={data[0].title2} title3={data[0].title3} title4={data[0].title4} title5={data[0].title5}/>
+      <div className="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
+        <a href="#slide3" className="btn btn-circle bg-slate-400">❮</a> 
+        <a href="#slide2" className="btn btn-circle bg-slate-400">❯</a>
+      </div>
+    </div>
+    <div id="slide2" className="carousel-item relative w-full ">
+      <SlideItems src1={data[1].src1} src2={data[1].src2} title1={data[1].title1} title2={data[1].title2} title3={data[1].title3} title4={data[1].title4} title5={data[1].title5}/>
+      <div className="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
+        <a href="#slide1" className="btn btn-circle bg-slate-400">❮</a> 
+        <a href="#slide3" className="btn btn-circle bg-slate-400">❯</a>
+      </div>
+    </div>
+    <div id="slide3" className="carousel-item relative w-full ">
+      <SlideItems src1={data[2].src1} src2={data[2].src2} title1={data[2].title1} title2={data[2].title2} title3={data[2].title3} title4={data[2].title4} title5={data[2].title5}/>
+      <div className="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
+        <a href="#slide2" className="btn btn-circle bg-slate-400">❮</a> 
+        <a href="#slide1" className="btn btn-circle bg-slate-400">❯</a>
+      </div>
     </div>
   </div>
-  <div id="slide2" className="carousel-item relative w-full ">
-    <SlideItems src1={data[1].src1} src2={data[1].src2} title1={data[1].title1} title2={data[1].title2} title3={data[1].title3} title4={data[1].title4} title5={data[1].title5}/>
-    <div className="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
-      <a href="#slide1" className="btn btn-circle bg-slate-400">❮</a> 
-      <a href="#slide3" className="btn btn-circle bg-slate-400">❯</a>
-    </div>
-  </div>
-  <div id="slide3" className="carousel-item relative w-full ">
-    <SlideItems src1={data[2].src1} src2={data[2].src2} title1={data[2].title1} title2={data[2].title2} title3={data[2].title3} title4={data[2].title4} title5={data[2].title5}/>
-    <div className="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
-      <a href="#slide2" className="btn btn-circle bg-slate-400">❮</a> 
-      <a href="#slide1" className="btn btn-circle bg-slate-400">❯</a>
-    </div>
-  </div>
-</div>
 </div>
 
   )

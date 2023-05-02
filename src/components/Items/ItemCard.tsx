@@ -14,7 +14,7 @@ type Props = {
 export default function ItemCard({ brand, price, image,discount, description}: Props) {
   return (
     <>
- <div className='border w-80 max-sm:w-full rounded-2xl p-5 border-indigo-200'>
+ <div className='border w-full max-sm:w-full rounded-2xl p-5 border-indigo-200'>
 <div className="card  shadow-xl bg-slate-300 mb-2">
   <figure className="">
     <img src={image} alt="" className="rounded-xl h-[30vh]" />

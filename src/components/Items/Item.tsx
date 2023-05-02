@@ -34,13 +34,13 @@ const Data = [{
 
 export default function Item() {
   return (
-    <div className='width-padding'> 
+    <div className='width-padding pb-52'> 
     <div className='flex '>
     <Title title='Feature'/>
     <Title title='Popular'/>
     <Title title='New'/>
     </div>
-    <div className='flex justify-between mb-10 '>
+    <div className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-5'>
       {Data.map((item, index) => (
         <ItemCard brand={item.brand} description={item.description} discount={item.discount} image={item.image} price={item.price} />
       ))}
