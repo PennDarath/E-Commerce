@@ -7,10 +7,11 @@ import {
   FiShoppingCart,
   FiShuffle
 } from 'react-icons/fi';
+import Spacer from '../Spacer';
 import NavbarItems from './NavbarItems';
 
 
-const navItems = ['Shop', 'Mega menu', 'Blog', 'Pages'];
+const navItems = ['Shop', 'Mega menu'];
 
 
 export default function NavBar({setShow}: any) {
@@ -64,9 +65,29 @@ export default function NavBar({setShow}: any) {
             </p>
           </div>
           <div className="flex text-2xl">
-            <FiShuffle />
-            <FiHeart className="mx-6" />
-            <FiShoppingCart />
+            <button className='flex relative'>
+              <FiShuffle />
+              <Spacer width={30}/>
+              <div className='border bg-indigo-700 w-5 h-5 absolute left-[21px] bottom-3 rounded-full text-sm text-white'>0</div>
+            </button>
+            <button className='flex relative'>
+              <FiHeart className="" />
+              <Spacer width={30}/>
+              <div className='border bg-indigo-700 w-5 h-5 absolute left-[21px] bottom-3 rounded-full text-sm text-white'>0</div>
+            </button>
+            <button className='flex relative'>
+              <FiShoppingCart />
+              <div className='border bg-indigo-700 w-5 h-5 absolute left-[21px] bottom-3 rounded-full text-sm text-white'>1</div>
+            </button>
+            {/* <button>
+             
+            </button>
+            <button>
+              
+            </button> */}
+            
+            
+           
               <FiMenu className="lg:hidden ml-6" onClick={()=>setShow(true)}/>
           </div>
         </div>
@@ -100,7 +121,7 @@ export default function NavBar({setShow}: any) {
             </div>
           </div>
 
-          <div className="flex w-[65%] justify-between">
+          <div className="flex w-[65%] justify-around">
             <NavbarItems title="Home" />
             <div className="flex items-center font-navbar hover:text-indigo-700">
               <a href="#">ABOUT</a>
