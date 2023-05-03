@@ -8,6 +8,8 @@ import SlideItems from './components/SlideSection/SlidesItems';
 import Slide from './components/SlideSection/Slide';
 import Title from './components/Items/Title';
 import Item from './components/Items/Item';
+import Slider from './components/SlideSection/Slider';
+import Spacer from './components/Spacer';
 
 
 
@@ -31,16 +33,15 @@ function App() {
   // };
 
   return (
-    <div className=" h-screen bg-white w-screen">
+    <div className=" bg-white w-screen pb-52">
       
       <NavbarMobile show={show} setShow={setShow} />
       <Login />
       <NavBar setShow={setShow} />
-      <Slide />
+      <Spacer height={60}/>
+      <Slider />  
       <Item  />
-
-
-     
+ 
       
     </div>
   );

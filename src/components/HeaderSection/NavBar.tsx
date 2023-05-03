@@ -14,26 +14,26 @@ const navItems = ['Shop', 'Mega menu', 'Blog', 'Pages'];
 
 
 export default function NavBar({setShow}: any) {
-  // const StickyNav = React.useRef<HTMLDivElement>(null);
+  const StickyNav = React.useRef<HTMLDivElement>(null);
 
-  // React.useEffect(() => {
-  //   const stickyNav = StickyNav.current;
-  //   const stick = stickyNav!.offsetTop;
-  //   const scrollCallBack = () => {
-  //     console.log(stickyNav?.offsetTop);
-  //     if (window.scrollY > 130) {
-  //       stickyNav!.classList.add('border-b-indigo-700');
-  //     } else {
-  //       stickyNav!.classList.remove('border-b-indigo-700');
-  //     }
-  //   };
+  React.useEffect(() => {
+    const stickyNav = StickyNav.current;
+    const stick = stickyNav!.offsetTop;
+    const scrollCallBack = () => {
+      console.log(stickyNav?.offsetTop);
+      if (window.scrollY > 130) {
+        stickyNav!.classList.add('border-b-indigo-700');
+      } else {
+        stickyNav!.classList.remove('border-b-indigo-700');
+      }
+    };
 
-    // window.addEventListener('scroll', scrollCallBack);
+    window.addEventListener('scroll', scrollCallBack);
 
-  //   return () => {
-  //     window.removeEventListener('scroll', scrollCallBack);
-  //   };
-  // }, []);
+    return () => {
+      window.removeEventListener('scroll', scrollCallBack);
+    };
+  }, []);
 
   return (
     <>
@@ -73,8 +73,8 @@ export default function NavBar({setShow}: any) {
       </div>
       {/* navbar categories */}
       <div
-        className="bg-white top-0 lg:border-b-2 lg:pb-3"
-        // ref={StickyNav}
+        className="sticky top-0 z-40 bg-white lg:border-b-2 lg:pb-3"
+        ref={StickyNav}
       >
         <div className="width-padding max-lg:hidden flex items-center justify-between">
           <div className="flex items-center">
@@ -124,3 +124,4 @@ export default function NavBar({setShow}: any) {
     </>
   );
 }
+
