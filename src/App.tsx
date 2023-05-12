@@ -10,6 +10,10 @@ import Title from './components/Items/Title';
 import Item from './components/Items/Item';
 import Slider from './components/SlideSection/Slider';
 import Spacer from './components/Spacer';
+import { Route, Routes } from 'react-router-dom';
+import HomePage from './pages/HomePage';
+import AboutPage from './pages/AboutPage';
+import DetailPages from './pages/DetailPages';
 
 
 
@@ -19,7 +23,6 @@ const fakeimages = [
 ];
 
 function App() {
-  const [show, setShow] = useState(false);
   // const [quote, setQuote] = useState<any>([]);
   // const getQuote = () => {
   //   axios
@@ -34,15 +37,11 @@ function App() {
 
   return (
     <div className=" bg-white w-screen pb-52">
-      
-      <NavbarMobile show={show} setShow={setShow} />
-      <Login />
-      <NavBar setShow={setShow} />
-      <Spacer height={60}/>
-      <Slider />  
-      <Item  />
- 
-      
+      <Routes>
+        <Route path='/' Component={HomePage} />
+        <Route path='/about' Component={AboutPage} />
+        <Route path='/DetailPages' Component={DetailPages} />
+      </Routes>
     </div>
   );
 }
